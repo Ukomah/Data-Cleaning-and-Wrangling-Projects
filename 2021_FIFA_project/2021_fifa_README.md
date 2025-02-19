@@ -15,6 +15,7 @@ Based on the dataset structure, the following **data cleaning and wrangling** ta
 #### **2️⃣ Removing Unnecessary Columns**
 - Columns like **`photoUrl`**, **`playerUrl`**, and **`\n\n\n\n` artifacts in `Club`** may not be useful for numerical analysis.
 - Remove redundant columns like **LongName** (similar to **Name**).
+- Rename all columns and replace spaces with underscores to encourage usability and to avoid syntax error due to naming convention.
 
 #### **3️⃣ Fixing Data Types**
 - **Convert `Value`, `Wage`, `Release Clause` from string to numeric** (e.g., `€110.5M` → `110500000`).
