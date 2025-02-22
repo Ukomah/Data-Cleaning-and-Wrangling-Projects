@@ -24,24 +24,6 @@ Based on the dataset structure, the following **data cleaning and wrangling** ta
   - `"176lbs"` → Convert to **kg** (e.g., `80 kg`).
 - **Columns `W/F`, `SM`, `IR` contain special characters (`★`)** → Convert them to integers.
 
-#### **4️⃣ Standardizing Text Formatting**
-- Strip **extra spaces and newlines** from categorical columns (`Club`, `Nationality`, etc.).
-- Convert **all string-based categories to lowercase** for consistency (`Preferred Foot`, `Best Position`).
-
-#### **5️⃣ Handling Outliers**
-- **Check extreme values in numerical features** (`PAC`, `SHO`, `PAS`, etc.).
-- Detect outliers using **Interquartile Range (IQR)** and **Z-score**.
-
-#### **6️⃣ Feature Engineering**
-- **Extract contract length** from `Contract` (e.g., `"2025"` → `Years remaining`).
-- **Create a new feature `Market Value per OVA`**:
-  ```python
-  df["Market Value per OVA"] = df["Value"] / df["↓OVA"]
-  ```
-- **Group Players by Age Categories**:
-  ```python
-  df["Age Group"] = pd.cut(df["Age"], bins=[15, 20, 25, 30, 35, 40], labels=["Teen", "Young", "Prime", "Veteran", "Old"])
-  ```
 ---
 
 ## 📌 Table of Abbreviated Features
