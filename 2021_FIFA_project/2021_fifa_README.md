@@ -24,6 +24,11 @@ Based on the dataset structure, the following **data cleaning and wrangling** ta
   - `"176lbs"` → Convert to **kg** (e.g., `80 kg`).
 - **Columns `W/F`, `SM`, `IR` contain special characters (`★`)** → Convert them to integers.
 
+#### **4️⃣ Calculate the difference between contract years and replace the existing values with the duration.**
+
+#### **5️⃣ Convert the `joined` Column entries to datetime**
+
+
 ---
 
 ## 📌 Table of Abbreviated Features
